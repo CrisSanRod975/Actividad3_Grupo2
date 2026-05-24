@@ -21,8 +21,13 @@
 ## Descripción de componentes
 
 ### Arduino UNO
+<img src="doc/img/arduino.png" width="220">
+
 Microcontrolador principal encargado de la lectura de sensores, procesamiento de datos y control de actuadores del sistema automatizado. Seleccionado como unidad de control principal, debido a la facilidad de uso, compatibilidad con múltiples sensores y su integración con la plataforma de simulación WOKWI.
 
+[Fuente de la imagen](https://en.wikipedia.org/wiki/Arduino_Uno)
+
+[Datasheet](doc/datasheet/Arduino.pdf)
 ### Keypad (teclado matricial)
 Utilizado para la selección de plantas por parte del usuario. Permite introducir las llamadas del ascensor de forma sencilla.
 
