@@ -30,18 +30,22 @@ Utilizado para la selección de plantas por parte del usuario. Permite introduci
 Empleado para simular el movimiento del ascensor entre plantas mediante diferentes posiciones angulares.
 
 ### Pantalla LCD 16x2 I2C
+<img src="doc/img/lcdI2C.png" width="220">
+<sub>Fuente imagen: https://robotlandia.es/pantallas/995-pantalla-azul-lcd-1602-con-modulo-iici2c-para-arduino-de-16x2-caracteres.html</sub>
+
 Permite visualizar en tiempo real las variables ambientales, estados del sistema y parámetros configurables del ascensor industrial. Usado para la visualización de datos a través de una pantalla. Muestra de forma clara y organizada la información del sistema. El uso del protocolo I2C reduce el número de conexiones necesarias.
+
+[Datasheet](doc/datasheet/LCD.pdf)
 
 ### Tira de LEDs (NeoPixel)
 Utilizada como indicador visual de la posición del ascensor y de las llamadas pendientes. 
 
 ### Sensor DHT22
 
-<img src="docs/img/dht22.png" width="220">
+<img src="doc/img/dht22.png" width="220">
+<sub>Fuente imagen: https://cityos-air.readme.io/docs/4-dht22-digital-temperature-humidity-sensor</sub>
 
 Sensor digital utilizado para medir temperatura y humedad relativa del entorno de operación. Encargado de medir la temperatura y la humedad dentro del ascensor, permitiendo el control automático del sistema de ventilación. 
-
-<sub>Fuente imagen: https://cityos-air.readme.io/docs/4-dht22-digital-temperature-humidity-sensor</sub>
 
 [Datasheet](https://drive.google.com/viewerng/viewer?url=https://cdn-shop.adafruit.com/datasheets/Digital%2Bhumidity%2Band%2Btemperature%2Bsensor%2BAM2302.pdf)
 
