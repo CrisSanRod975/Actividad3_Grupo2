@@ -26,7 +26,7 @@ Microcontrolador principal encargado de la lectura de sensores, procesamiento de
 ### Keypad (teclado matricial)
 Utilizado para la selección de plantas por parte del usuario. Permite introducir las llamadas del ascensor de forma sencilla.
 
-## Servomotor
+### Servomotor
 Empleado para simular el movimiento del ascensor entre plantas mediante diferentes posiciones angulares.
 
 ### Pantalla LCD 16x2 I2C
