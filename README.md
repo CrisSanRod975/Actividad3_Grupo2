@@ -37,11 +37,13 @@ Utilizada como indicador visual de la posición del ascensor y de las llamadas p
 
 ### Sensor DHT22
 
+<img src="docs/img/dht22.png" width="220">
+
 Sensor digital utilizado para medir temperatura y humedad relativa del entorno de operación. Encargado de medir la temperatura y la humedad dentro del ascensor, permitiendo el control automático del sistema de ventilación. 
 
-Fuente imagen:
-https://cityos-air.readme.io/docs/4-dht22-digital-temperature-humidity-sensor
-[Datasheet](https://drive.google.com/viewerng/viewer?url=https://cdn-shop.adafruit.com/datasheets/Digital%2Bhumidity%2Band%2Btemperature%2Bsensor%2BAM2302.pdf)
+<sub>Fuente imagen: https://cityos-air.readme.io/docs/4-dht22-digital-temperature-humidity-sensor</sub>
+
+[Datasheet](https://cdn-shop.adafruit.com/datasheets/DigitalhumidityandtemperaturesensorAM2302.pdf)
 
 ### LEDs de señalización
 Indicadores visuales utilizados para representar estados de funcionamiento, alarmas o activación de sistemas auxiliares. Empleados para la iluminación del interior del ascensor y como indicador del sistema de ventilación.
