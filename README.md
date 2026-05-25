@@ -111,6 +111,12 @@ Utilizados para simular la entrada (pulsador izquierdo) y la salida (pulsador de
 ### Sensor PIR (Infrarrojo pasivo)
 Utilizado para detectar movimiento en las proximidades del ascensor, activando la iluminación de forma automática incluso antes de que los usuarios entren. La selección de estos componentes se ha realizado buscando un equilibrio entre simplicidad, funcionalidad y adecuación a los objetivos del sistema.
 
+## Persistencia de configuración mediante EEPROM
+
+Se ha implementado el uso de la memoria EEPROM interna del Arduino UNO para almacenar parámetros importantes del sistema, como la última planta registrada y configuraciones de funcionamiento.
+
+Esta mejora permite conservar información crítica incluso tras reinicios o pérdidas de alimentación, simulando un comportamiento más próximo a sistemas industriales reales.
+
 ## Funcionamiento del sistema
 
 El sistema desarrollado simula el funcionamiento de un ascensor inteligente industrial. Los usuarios pueden seleccionar la planta de destino mediante un teclado matricial y el sistema gestiona automáticamente el desplazamiento entre plantas, así como la apertura y cierre de puertas.
