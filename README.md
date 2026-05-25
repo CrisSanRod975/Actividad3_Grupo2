@@ -1,6 +1,32 @@
-# Actividad3_Grupo2
-# Esquemático del circuito
-# Lista de componentes
+# Ascensor Industrial Inteligente ACME
+
+## Descripción del proyecto
+
+El proyecto consiste en el desarrollo de un sistema de ascensor inteligente implementado sobre una placa Arduino UNO y simulado en la plataforma WOKWI. El sistema ha sido diseñado para simular el funcionamiento de un ascensor industrial automatizado, integrando sensores, actuadores y sistemas de monitorización ambiental.
+
+El ascensor permite la selección de plantas mediante un teclado matricial, gestiona automáticamente el movimiento entre plantas y controla la apertura y cierre de puertas mediante una máquina de estados.
+
+Además, el sistema incorpora funciones de monitorización ambiental mediante sensores de temperatura, humedad y detección de presencia, mejorando la eficiencia energética y el confort de los usuarios.
+
+---
+
+## Características principales
+
+- Selección de plantas mediante teclado matricial.
+- Simulación del movimiento del ascensor mediante servomotor.
+- Sistema de apertura y cierre automático de puertas.
+- Indicadores visuales mediante LEDs NeoPixel.
+- Conteo de personas mediante pulsadores.
+- Detección de sobrecarga con alarma acústica.
+- Monitorización de temperatura y humedad mediante sensor DHT22.
+- Activación automática de iluminación mediante sensor PIR.
+- Control automático de ventilación.
+- Visualización de información mediante pantalla LCD I2C.
+
+---
+
+
+
 ## Componentes utilizados
 
 | Componente | Función |
@@ -85,6 +111,73 @@ Utilizados para simular la entrada (pulsador izquierdo) y la salida (pulsador de
 ### Sensor PIR (Infrarrojo pasivo)
 Utilizado para detectar movimiento en las proximidades del ascensor, activando la iluminación de forma automática incluso antes de que los usuarios entren. La selección de estos componentes se ha realizado buscando un equilibrio entre simplicidad, funcionalidad y adecuación a los objetivos del sistema.
 
-# Descripción de la lógica del firmware
-# Video o Gif animado del funcionamiento del circuito
-# Preguntas frecuentes
+## Funcionamiento del sistema
+
+El sistema desarrollado simula el funcionamiento de un ascensor inteligente industrial. Los usuarios pueden seleccionar la planta de destino mediante un teclado matricial y el sistema gestiona automáticamente el desplazamiento entre plantas, así como la apertura y cierre de puertas.
+
+El movimiento del ascensor se controla mediante una máquina de estados, permitiendo gestionar de forma organizada los distintos procesos del sistema.
+
+Además, el sistema incorpora monitorización ambiental mediante sensores de temperatura y humedad, activando automáticamente la ventilación cuando se superan determinados umbrales.
+
+También se incluye detección de movimiento mediante un sensor PIR, utilizado para activar la iluminación automáticamente y mejorar la eficiencia energética.
+
+---
+
+## Principales funciones del firmware
+
+| Función | Descripción |
+|---|---|
+| moverMotor() | Simula el movimiento del ascensor |
+| leerKeypad() | Gestiona las llamadas de usuarios |
+| siguientePlanta() | Determina la siguiente planta destino |
+| moverAscensor() | Implementa la máquina de estados |
+| actualizarLEDs() | Gestiona la señalización visual |
+| pulsadorPersonas() | Gestiona el conteo de personas |
+| controlSobrecarga() | Detecta situaciones de sobreocupación |
+| tempYhumedad() | Lee temperatura y humedad |
+| datosLCD() | Actualiza la información mostrada |
+| controlAmbiente() | Gestiona iluminación y ventilación |
+
+---
+
+## Pruebas realizadas
+
+Se han realizado diferentes pruebas individuales e integradas para validar el correcto funcionamiento del sistema:
+
+- Prueba de movimiento entre plantas.
+- Prueba de la máquina de estados.
+- Prueba del teclado matricial.
+- Prueba del conteo de personas.
+- Prueba del sistema de sobrecarga.
+- Prueba de visualización en LCD.
+- Prueba del sensor DHT22.
+- Prueba del sistema de ventilación.
+- Prueba del sensor PIR.
+- Prueba global del sistema integrado.
+
+Los resultados obtenidos han permitido verificar el correcto funcionamiento y estabilidad del sistema en diferentes escenarios de uso.
+
+---
+
+## Simulación en WOKWI
+
+[Acceso al proyecto en WOKWI](https://wokwi.com/projects/463175469323648001)
+
+---
+
+## Bibliografía y referencias
+
+- Documentación oficial Arduino:
+https://www.arduino.cc/
+
+- Plataforma de simulación WOKWI:
+https://wokwi.com/
+
+- Documentación Adafruit NeoPixel:
+https://learn.adafruit.com/adafruit-neopixel-uberguide
+
+- Material docente de la asignatura Equipos e Instrumentación Electrónica.
+
+- Cameron, A. (2019). Arduino Applied: Comprehensive Projects for Everyday Electronics.
+
+
