@@ -125,7 +125,7 @@ El movimiento del ascensor se controla mediante una máquina de estados, permiti
 
 Además, el sistema incorpora monitorización ambiental mediante sensores de temperatura y humedad, activando automáticamente la ventilación cuando se superan determinados umbrales.
 
-También se incluye detección de movimiento mediante un sensor PIR, utilizado para activar la iluminación automáticamente y mejorar la eficiencia energética.
+También se incluye detección de movimiento mediante un sensor PIR, utilizado para activar la iluminación automáticamente y mejorar la eficiencia energética. HOLA
 
 ---
 
