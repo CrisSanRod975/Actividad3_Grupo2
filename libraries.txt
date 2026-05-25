@@ -7,3 +7,4 @@ Servo
 Adafruit NeoPixel
 LiquidCrystal I2C
 DHT sensor library
+EEPROM-Storage

@@ -5,9 +5,21 @@
 #include <DHT.h>
 
 
+
 /** ============================
  * VARIABLES
  * ============================ */
+  //Variables para LCD
+
+  int ultimaPlanta = -1;
+  int ultimasPersonas = -1;
+
+  float ultimaTemp = -100;
+  float ultimaHum = -100;
+
+  String ultimoMensaje = "";
+  bool ultimaVentilacion = false;
+
   //Keypad - Teclado para pulsar la planta a la que queremos ir
   bool llamadas[5] = {false, false, false, false, false};
   int plantaActual = 0;
@@ -361,35 +373,74 @@
   *  - Temperatura y humedad
   *  - Estado de la ventilación
   * ============================ */
-  void datosLCD(){
+void datosLCD(){
+
+
+  // Línea 0 -> Planta y personas
+  if(plantaActual != ultimaPlanta || personas != ultimasPersonas){
+
     lcd.setCursor (0,0);
     lcd.print("Planta:");
-    lcd.print(plantaActual+1); //Sin decimales
+    lcd.print(plantaActual+1);
     lcd.print("  ");
+
     lcd.write(byte(0));
+
     lcd.print(":");
     lcd.print(personas);
+    lcd.print("   ");
 
+    ultimaPlanta = plantaActual;
+    ultimasPersonas = personas;
+  }
+
+  // Línea 1 -> Estado ascensor
+  if(mensajeAscensor != ultimoMensaje){
+
+    lcd.setCursor (0,1);
+    lcd.print("                    "); // Limpia línea
     lcd.setCursor (0,1);
     lcd.print(mensajeAscensor);
 
+    ultimoMensaje = mensajeAscensor;
+  }
+
+  // Línea 2 -> Temperatura y humedad
+  if(t != ultimaTemp || h != ultimaHum){
+
     lcd.setCursor (0,2);
+
     lcd.print("H:");
-    lcd.print(h, 1); //Sin decimales
+    lcd.print(h,1);
     lcd.print("% ");
+
     lcd.print("T:");
-    lcd.print(t, 1); //Sin decimales
-    lcd.write(223);//Símbolo ° de °C
-    lcd.print("C  ");
+    lcd.print(t,1);
+
+    lcd.write(223); // Símbolo °
+    lcd.print("C   ");
+
+    ultimaTemp = t;
+    ultimaHum = h;
+  }
+
+  // Línea 3 -> Ventilación
+  if(ventilacionActiva != ultimaVentilacion){
 
     lcd.setCursor (0,3);
-    if (t > 26 || t < 19 || h > 85) {
-    lcd.print("Ventilacion: ON     ");
+
+    if (ventilacionActiva) {
+
+      lcd.print("Ventilacion: ON     ");
+
     } else {
-    lcd.print("Ventilacion: OFF    ");
+
+      lcd.print("Ventilacion: OFF    ");
     }
-  
+
+    ultimaVentilacion = ventilacionActiva;
   }
+}
 
   /** ============================
   *  FUNCIÓN: controlAmbiente
@@ -428,7 +479,7 @@
       ventilacionActiva = true;
       }
     // APAGAR
-    if (ventilacionActiva && (t > 21 && t < 24 && h < 75)) {
+    if (ventilacionActiva && (t > 21 && t < 24 && h < 80)) {
       ventilacionActiva = false;
     }
       if (ventilacionActiva && personas > 0) {

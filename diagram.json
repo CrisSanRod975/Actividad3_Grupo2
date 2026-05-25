@@ -47,7 +47,7 @@
       "id": "dht1",
       "top": 365.1,
       "left": 666.6,
-      "attrs": { "humidity": "75", "temperature": "23.1" }
+      "attrs": { "humidity": "75", "temperature": "24.8" }
     },
     { "type": "wokwi-pir-motion-sensor", "id": "pir1", "top": 349.6, "left": 482.22, "attrs": {} },
     {
