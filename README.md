@@ -157,7 +157,10 @@ Se ha reorganizado el firmware siguiendo una arquitectura modular basada en func
 - Gestión de sobrecarga.
 - Señalización visual y acústica.
  
-Además, se ha utilizado la función `millis()` para gestionar temporizaciones sin bloquear la ejecución del sistema, permitiendo el funcionamiento simultáneo y coordinado de todos los módulos implementados.
+## Además, se ha utilizado la función `millis()` para gestionar temporizaciones sin bloquear la ejecución del sistema, permitiendo el funcionamiento simultáneo y coordinado de todos los módulos implementados.
+
+## Asimismo, se implementó una máquina de estados para el control del ascensor, permitiendo gestionar de forma ordenada las transiciones entre movimiento, apertura y cierre de puertas, mejorando la escalabilidad y mantenibilidad del sistema.
+
 ---
 
 ## Principales funciones del firmware
