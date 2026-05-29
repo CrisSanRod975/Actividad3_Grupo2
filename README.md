@@ -140,6 +140,12 @@ Una vez activada, la ventilación permanece funcionando hasta que las condicione
 Este comportamiento mejora la estabilidad del sistema y reduce el desgaste de los actuadores, simulando estrategias de control utilizadas en sistemas industriales reales.
  
 ---
+
+### Implementación de almacenamiento persistente mediante EEPROM
+
+Como mejora adicional del proyecto, se implementó el uso de la memoria EEPROM integrada en el Arduino Uno. Esta funcionalidad permite almacenar permanentemente la última planta en la que se encuentra el ascensor, evitando la pérdida de información ante cortes de alimentación o reinicios del sistema. Al volver a encenderse, el sistema recupera automáticamente la posición almacenada y sitúa el ascensor en la planta correspondiente.
+
+---
  
 ### Optimización y modularización del firmware
  
